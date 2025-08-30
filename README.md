@@ -50,6 +50,7 @@
 git clone [您的项目git地址]
 cd [您的项目目录]
 pip install -r requirements.txt
+也可选择直接使用3dgs的环境，只需要额外将submodules\langsplat-rasterization重新编译，基于https://github.com/minghanqin/langsplat-rasterization/tree/329f8e8c64a56f3f018397faa4a4996cbf024de0修改。
 ```
 *(注: `requirements.txt` 应包含 `torch`, `segment-anything-py`, `clip-openai`, `scikit-learn`, `numpy` 等)*
 
