@@ -64,6 +64,21 @@ pip install -r requirements.txt
     ```
 * **CLIP模型**: `CLIP` 模型权重通常会在您首次运行脚本时由 `clip` 库**自动下载**，请确保此时有网络连接。
 
+### 提取SAM掩码和CLIP特征
+
+此脚本将调用您准备好的SAM和OpenCLIP模型，为指定数据集路径下的所有图片生成掩码和特征文件。
+
+```bash
+# 命令格式
+python new_process.py --dataset_path [数据集路径]
+
+# 示例
+# 假设您的数据集（包含images文件夹）位于 "data/playroom"
+# 脚本将在 "data/playroom/sam_clip_features/" 目录下生成结果
+python new_process.py --dataset_path data/playroom
+```
+
+
 ### 步骤 2: 生成真值语义图
 
 该命令会遍历指定3DGS场景的训练相机，为每张图片生成对应的16维语义真值图。此脚本内部完成了SAM分割、CLIP提取和PCA降维的全过程。
